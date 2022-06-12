@@ -1313,9 +1313,9 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
             baseElement.superview = self;
             baseElement.accessibilityTraits = [super accessibilityTraits];
 
-            [mutableAccessibilityItems addObject:baseElement];
-
-            self.accessibilityElements = [NSArray arrayWithArray:mutableAccessibilityItems];
+	    [mutableAccessibilityItems insertObject:baseElement atIndex:0];
+           
+	   self.accessibilityElements = [NSArray arrayWithArray:mutableAccessibilityItems];
         }
     }
 
